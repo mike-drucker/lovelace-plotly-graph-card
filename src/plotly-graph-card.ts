@@ -19,7 +19,7 @@ import { TouchController } from "./touch-controller";
 import { ConfigParser } from "./parse-config/parse-config";
 import { merge } from "lodash";
 
-const componentName = isProduction ? "plotly-graph" : "plotly-graph-dev";
+const componentName = isProduction ? "plotly-graph-stats" : "plotly-graph-stats-dev";
 
 console.info(
   `%c ${componentName.toUpperCase()} %c ${version} ${process.env.NODE_ENV}`,
@@ -27,7 +27,7 @@ console.info(
   "color: white; font-weight: bold; background: dimgray"
 );
 
-export class PlotlyGraph extends HTMLElement {
+export class PlotlyGraphStat extends HTMLElement {
   contentEl: Plotly.PlotlyHTMLElement & {
     data: (Plotly.PlotData & { entity: string })[];
     layout: Plotly.Layout;
