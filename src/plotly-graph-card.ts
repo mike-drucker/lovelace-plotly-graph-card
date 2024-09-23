@@ -211,6 +211,7 @@ export class PlotlyGraphStat extends HTMLElement {
       return;
     }
     if (this.parsed_config?.refresh_interval === "auto") {
+      console.log('card-change-occured');
       let shouldPlot = false;
       let should_fetch = false;
       for (const entity of this.parsed_config.entities) {
